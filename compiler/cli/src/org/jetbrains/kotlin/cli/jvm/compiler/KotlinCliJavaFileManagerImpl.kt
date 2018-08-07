@@ -20,7 +20,10 @@ import com.intellij.core.CoreJavaFileManager
 import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.util.text.StringUtil
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.psi.*
+import com.intellij.psi.PsiClass
+import com.intellij.psi.PsiClassOwner
+import com.intellij.psi.PsiManager
+import com.intellij.psi.PsiPackage
 import com.intellij.psi.impl.file.PsiPackageImpl
 import com.intellij.psi.search.GlobalSearchScope
 import gnu.trove.THashMap
@@ -233,11 +236,6 @@ class KotlinCliJavaFileManagerImpl(private val myPsiManager: PsiManager) : CoreJ
         }
 
         return result
-    }
-
-    override fun findModules(moduleName: String, scope: GlobalSearchScope): Collection<PsiJavaModule> {
-        // TODO
-        return emptySet()
     }
 
     override fun getNonTrivialPackagePrefixes(): Collection<String> = emptyList()
