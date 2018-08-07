@@ -17,10 +17,10 @@
 package org.jetbrains.kotlin.cli.jvm.modules
 
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.psi.PsiJavaModule
 import org.jetbrains.kotlin.resolve.jvm.modules.JavaModule
 import org.jetbrains.kotlin.resolve.jvm.modules.JavaModuleFinder
 import org.jetbrains.kotlin.resolve.jvm.modules.JavaModuleInfo
+import org.jetbrains.kotlin.resolve.jvm.modules.PsiJavaModule
 
 class CliJavaModuleFinder(jrtFileSystemRoot: VirtualFile?) : JavaModuleFinder {
     private val modulesRoot = jrtFileSystemRoot?.findChild("modules")

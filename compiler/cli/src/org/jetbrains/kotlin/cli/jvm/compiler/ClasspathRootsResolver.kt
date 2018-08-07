@@ -19,7 +19,6 @@ package org.jetbrains.kotlin.cli.jvm.compiler
 import com.intellij.openapi.vfs.StandardFileSystems
 import com.intellij.openapi.vfs.VfsUtilCore
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.psi.PsiJavaModule
 import com.intellij.psi.PsiManager
 import com.intellij.psi.impl.light.LightJavaModule
 import org.jetbrains.kotlin.cli.common.config.ContentRoot
@@ -40,6 +39,7 @@ import org.jetbrains.kotlin.name.isValidJavaFqName
 import org.jetbrains.kotlin.resolve.jvm.modules.JavaModule
 import org.jetbrains.kotlin.resolve.jvm.modules.JavaModuleInfo
 import org.jetbrains.kotlin.resolve.jvm.modules.KOTLIN_STDLIB_MODULE_NAME
+import org.jetbrains.kotlin.resolve.jvm.modules.PsiJavaModule
 import java.io.IOException
 import java.util.jar.Attributes
 import java.util.jar.Manifest

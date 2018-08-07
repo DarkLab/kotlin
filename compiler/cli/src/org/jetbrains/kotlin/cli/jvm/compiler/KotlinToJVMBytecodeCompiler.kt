@@ -19,7 +19,6 @@ package org.jetbrains.kotlin.cli.jvm.compiler
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.psi.PsiJavaModule
 import com.intellij.psi.PsiManager
 import com.intellij.psi.impl.PsiModificationTrackerImpl
 import com.intellij.psi.search.DelegatingGlobalSearchScope
@@ -56,6 +55,7 @@ import org.jetbrains.kotlin.modules.TargetId
 import org.jetbrains.kotlin.name.FqName
 import org.jetbrains.kotlin.progress.ProgressIndicatorAndCompilationCanceledStatus
 import org.jetbrains.kotlin.psi.KtFile
+import org.jetbrains.kotlin.resolve.jvm.modules.PsiJavaModule
 import org.jetbrains.kotlin.script.tryConstructClassFromStringArgs
 import org.jetbrains.kotlin.utils.newLinkedHashMapWithExpectedSize
 import java.io.File
