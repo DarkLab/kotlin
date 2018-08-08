@@ -101,6 +101,11 @@ public class DiagnosticsWithUnsignedTypesGenerated extends AbstractDiagnosticsWi
             runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/conversions/conversionOfSignedToUnsigned.kt");
         }
 
+        @TestMetadata("inferenceForSignedAndUnsignedTypes.kt")
+        public void testInferenceForSignedAndUnsignedTypes() throws Exception {
+            runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/conversions/inferenceForSignedAndUnsignedTypes.kt");
+        }
+
         @TestMetadata("overloadResolutionForSignedAndUnsignedTypes.kt")
         public void testOverloadResolutionForSignedAndUnsignedTypes() throws Exception {
             runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/conversions/overloadResolutionForSignedAndUnsignedTypes.kt");
