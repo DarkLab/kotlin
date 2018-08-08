@@ -69,7 +69,9 @@ class ConstraintSystemTestData(
             val parameters = CompileTimeConstant.Parameters(false, false, false, false, false, false, false)
             return KotlinTypeFactory.simpleTypeWithNonTrivialMemberScope(
                 Annotations.EMPTY,
-                IntegerValueTypeConstructor(number.toLong(), functionFoo.module, parameters),
+                IntegerValueTypeConstructor(
+                    number.toLong(), functionFoo.module, parameters.isUnsignedNumberLiteral, parameters.isConvertableConstVal
+                ),
                 listOf(),
                 false,
                 MemberScope.Empty

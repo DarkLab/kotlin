@@ -30,7 +30,8 @@ import java.util.*
 class IntegerValueTypeConstructor(
     private val value: Long,
     private val module: ModuleDescriptor,
-    parameters: CompileTimeConstant.Parameters
+    isUnsigned: Boolean,
+    isConvertable: Boolean
 ) : TypeConstructor {
     private val supertypes = ArrayList<KotlinType>(4)
 
@@ -38,8 +39,6 @@ class IntegerValueTypeConstructor(
         // order of types matters
         // 'getPrimitiveNumberType' returns first of supertypes that is a subtype of expected type
         // for expected type 'Any' result type 'Int' should be returned
-        val isUnsigned = parameters.isUnsignedNumberLiteral
-        val isConvertable = parameters.isConvertableConstVal
 
         if (isUnsigned || isConvertable) {
             assert(hasUnsignedTypesInModuleDependencies(module)) {

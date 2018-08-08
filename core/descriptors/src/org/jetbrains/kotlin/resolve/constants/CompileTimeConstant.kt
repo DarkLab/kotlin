@@ -126,7 +126,9 @@ class IntegerValueTypeConstant(
         module: ModuleDescriptor,
         override val parameters: CompileTimeConstant.Parameters
 ) : CompileTimeConstant<Number> {
-    private val typeConstructor = IntegerValueTypeConstructor(value.toLong(), module, parameters)
+    private val typeConstructor = IntegerValueTypeConstructor(
+        value.toLong(), module, parameters.isUnsignedNumberLiteral, parameters.isConvertableConstVal
+    )
 
     override fun toConstantValue(expectedType: KotlinType): ConstantValue<Number> {
         val type = getType(expectedType)

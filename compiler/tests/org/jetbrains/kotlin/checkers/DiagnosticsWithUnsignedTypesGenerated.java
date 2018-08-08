@@ -100,5 +100,10 @@ public class DiagnosticsWithUnsignedTypesGenerated extends AbstractDiagnosticsWi
         public void testConversionOfSignedToUnsigned() throws Exception {
             runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/conversions/conversionOfSignedToUnsigned.kt");
         }
+
+        @TestMetadata("signedToUnsignedConversionWithExpectedType.kt")
+        public void testSignedToUnsignedConversionWithExpectedType() throws Exception {
+            runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/conversions/signedToUnsignedConversionWithExpectedType.kt");
+        }
     }
 }
